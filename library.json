@@ -1,0 +1,40 @@
+{
+  "name": "ButtonDebounce",
+  "version": "1.0.0",
+  "description": "Modular C++ button debouncing library with interchangeable algorithms",
+  "keywords": [
+    "button",
+    "debounce",
+    "input",
+    "switch",
+    "embedded"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "authors": [
+    {
+      "name": "Michael Garcia",
+      "email": "michael@mandedesign.studio",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": "ButtonDebounce.h",
+  "export": {
+    "include": "src"
+  },
+  "build": {
+    "flags": "-std=c++11",
+    "srcFilter": [
+      "+<*>",
+      "-<buttonDebounceConsecutive.cpp>",
+      "-<buttonDebounceEdgeGated.cpp>"
+    ]
+  },
+  "examples": "examples/*/*.ino"
+}
